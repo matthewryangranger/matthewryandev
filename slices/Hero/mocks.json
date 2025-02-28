@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"first_name": {
+				"__TYPE__": "FieldContent",
+				"value": "machine",
+				"type": "Text"
+			},
+			"middle_name": {
+				"__TYPE__": "FieldContent",
+				"value": "touch",
+				"type": "Text"
+			},
+			"career_tagline": {
+				"__TYPE__": "FieldContent",
+				"value": "beneath",
+				"type": "Text"
+			},
+			"last_name": {
+				"__TYPE__": "FieldContent",
+				"value": "nine",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
