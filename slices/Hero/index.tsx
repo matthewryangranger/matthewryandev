@@ -67,7 +67,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             <span className="block text-slate-600 whitespace-nowrap">{renderLetters(slice.primary.middle_name, "middle")}</span>
             <span className="-mt-[.2em] block text-slate-800 whitespace-nowrap">{renderLetters(slice.primary.last_name, "last")}</span>
           </h1>
-          <span className="job-title block bg-gradient-to-tr from-slate-800 via-slate-700 to-slate-800 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl"><>{slice.primary.career_tagline}</></span>
+          <span className="job-title block ml-1.5 bg-gradient-to-tr from-slate-800 via-slate-700 to-slate-800 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl"><>{slice.primary.career_tagline}</></span>
         </div>
       </div>
     </Bounded>

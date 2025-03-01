@@ -24,9 +24,24 @@ export default function Shapes() {
 function Geometries() {
     const geometries = [
         {
-            position: [0, 0, 0,],
+            position: [0, 0, 0],
             r: 0.3,
-            geometry: new THREE.IcosahedronGeometry(3) // Gem
+            geometry: new THREE.IcosahedronGeometry(3) // Icosahedron
+        },
+        {
+            position: [-.9, 1.6, -1],
+            r: 0.9,
+            geometry: new THREE.TetrahedronGeometry(.3) // Icosahedron
+        },
+        {
+            position: [1.6, -.75, 1],
+            r: 0.9,
+            geometry: new THREE.TetrahedronGeometry(.4) // Icosahedron
+        },
+        {
+            position: [-1.2, -1.2, 1.6],
+            r: 0.9,
+            geometry: new THREE.TetrahedronGeometry(.3) // Icosahedron
         }
     ];
 
@@ -36,10 +51,17 @@ function Geometries() {
         new THREE.MeshStandardMaterial({ color: 0x2C3A47, roughness: 1, metalness: 1 })
     ];
 
+    const soundEffects = [
+        new Audio("./laser7.ogg"),
+        new Audio("./laser8.ogg"),
+        new Audio("./laser9.ogg")
+    ]
+
     return geometries.map(({ position, r, geometry }) => (
         <Geometry
             key={JSON.stringify(position)}
             position={position.map((p) => p * 2)}
+            soundEffects={soundEffects}
             geometry={geometry}
             materials={materials}
             r={r}
@@ -48,7 +70,7 @@ function Geometries() {
 
 }
 
-function Geometry({ r, position, geometry, materials }) {
+function Geometry({ r, position, geometry, materials, soundEffects }) {
     const meshRef = useRef();
     const [visible, setVisible] = useState(false);
 
@@ -61,13 +83,16 @@ function Geometry({ r, position, geometry, materials }) {
     function handleClick(e) {
         const mesh = e.object;
 
+        gsap.utils.random(soundEffects).play();
+
         gsap.to(mesh.rotation, {
             x: `+=${gsap.utils.random(0, 2)}`,
             y: `+=${gsap.utils.random(0, 2)}`,
             z: `+=${gsap.utils.random(0, 2)}`,
             duration: 1.3,
             ease: "elastic.out(1, 0.3)",
-            yoyo: true
+            yoyo: true,
+            speed: 3
         });
 
         mesh.material = getRandomMaterial();
