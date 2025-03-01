@@ -4,6 +4,7 @@ import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Float, Environment } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useState } from "react";
+import { roughness } from "three/tsl";
 
 
 export default function Shapes() {
@@ -30,8 +31,10 @@ function Geometries() {
     ];
 
     const materials = [
-        new THREE.MeshNormalMaterial()
-    ]
+        new THREE.MeshNormalMaterial(),
+        new THREE.MeshStandardMaterial({ color: 0x2C3A47, roughness: 1 }),
+        new THREE.MeshStandardMaterial({ color: 0x2C3A47, roughness: 1, metalness: 1 })
+    ];
 
     return geometries.map(({ position, r, geometry }) => (
         <Geometry
@@ -47,7 +50,7 @@ function Geometries() {
 
 function Geometry({ r, position, geometry, materials }) {
     const meshRef = useRef();
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
 
     const startingMaterial = getRandomMaterial();
 
@@ -71,12 +74,25 @@ function Geometry({ r, position, geometry, materials }) {
     }
 
     const handlePointerOver = () => {
-        document.body.style.cursor = "pointer"
+        document.body.style.cursor = "pointer";
     }
 
     const handlePointerOut = () => {
-        document.body.style.cursor = "default"
+        document.body.style.cursor = "default";
     }
+
+    useEffect(() => {
+        let ctx = gsap.context(() => {
+            setVisible(true);
+            gsap.from(meshRef.current.scale, {
+                x: 0, y: 0, z: 0,
+                duration: 1,
+                ease: "elastic.out(1,0.3)",
+                delay: 0.6,
+            });
+        });
+        return () => ctx.revert();
+    }, []);
 
     return (
         <group position={position} ref={meshRef}>
