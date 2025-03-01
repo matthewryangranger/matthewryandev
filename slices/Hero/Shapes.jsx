@@ -27,21 +27,6 @@ function Geometries() {
             position: [0, 0, 0],
             r: 0.3,
             geometry: new THREE.IcosahedronGeometry(3) // Icosahedron
-        },
-        {
-            position: [-.9, 1.6, -1],
-            r: 0.9,
-            geometry: new THREE.TetrahedronGeometry(.3) // Icosahedron
-        },
-        {
-            position: [1.6, -.75, 1],
-            r: 0.9,
-            geometry: new THREE.TetrahedronGeometry(.4) // Icosahedron
-        },
-        {
-            position: [-1.2, -1.2, 1.6],
-            r: 0.9,
-            geometry: new THREE.TetrahedronGeometry(.3) // Icosahedron
         }
     ];
 
