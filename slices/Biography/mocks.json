@@ -19,22 +19,7 @@
 					}
 				]
 			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"value": "blind",
-				"type": "Text"
-			},
-			"button_link": {
-				"key": "a7e3734c-407d-4ed7-b5c3-d4ca2923ce64",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://google.com",
-					"text": "discover"
-				}
-			},
 			"avatar": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
@@ -53,6 +38,8 @@
 					"background": "transparent"
 				},
 				"alt": "failed",
+				"credits": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			}
 		},
