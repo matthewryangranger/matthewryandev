@@ -17,7 +17,7 @@ const TechList: FC<TechListProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <Heading size="lg" as="h2" className="text-slate-700">
+      <Heading size="md" as="h2" className="text-slate-700">
         {slice.primary.heading}
       </Heading>
       {slice.primary.tech_list_group.map(({ tech_color, tech_name }, index) => (

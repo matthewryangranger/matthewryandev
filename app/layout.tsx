@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Alumni_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-
-const fran = Alumni_Sans({
-  subsets: ["latin"],
-  weight: "500"
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-stone-950 text-slate-100">
-      <body className={fran.className}>
+      <body className={``}>
         <Header />
         {children}
       </body>

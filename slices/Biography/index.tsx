@@ -22,10 +22,10 @@ const Biography: FC<BiographyProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
     >
       <div className="grid gap-x-8 gap-y-6 md:grid-cols-[2fr, 1fr]">
-        <Heading as="h1" size="lg" className="about-me text-stone-400 col-start-1">
+        <Heading as="h1" size="md" className="about-me text-stone-400 col-start-1">
           {slice.primary.heading}
         </Heading>
-        <div className="prose prose-xl prose-slate prose-invert col-start-1 text-3xl text-zinc-500">
+        <div className="prose prose-xl prose-slate prose-invert col-start-1 text-2xl text-zinc-500">
           <PrismicRichText field={slice.primary.biography_paragraph} />
         </div>
 
