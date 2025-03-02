@@ -1,9 +1,8 @@
 "use client";
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 import { Content, KeyTextField } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
 import Bounded from "@/components/Bounded";
 import Shapes from "./Shapes";
 
@@ -42,7 +41,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     }, component);
     return () => ctx.revert();
 
-  }, [])
+  }, []);
 
   const renderLetters = (name: KeyTextField, key: string) => {
     if (!name) return;
@@ -51,7 +50,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         {letter}
       </span>
     ))
-  }
+  };
 
   return (
     <Bounded
@@ -62,9 +61,9 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center">
         <Shapes />
         <div className="col-start-1 md:row-start-1">
-          <h1 className="mb-8 text-[clamp(3rem,15vmin,20rem)] font-extrabold leading-none tracking-tighter" aria-label={slice.primary.first_name + " " + slice.primary.middle_name}>
+          <h1 className="mb-8 text-9xl font-extrabold leading-none tracking-wide" aria-label={slice.primary.first_name + " " + slice.primary.middle_name}>
             <span className="block text-slate-600 whitespace-nowrap">{renderLetters(slice.primary.first_name, "first")}</span>
-            <span className="block text-slate-600 whitespace-nowrap">{renderLetters(slice.primary.middle_name, "middle")}</span>
+            <span className="-mt-[.2em] block text-slate-600 whitespace-nowrap">{renderLetters(slice.primary.middle_name, "middle")}</span>
             <span className="-mt-[.2em] block text-slate-800 whitespace-nowrap">{renderLetters(slice.primary.last_name, "last")}</span>
           </h1>
           <span className="job-title block bg-gradient-to-tr from-slate-800 via-slate-700 to-slate-800 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl"><>{slice.primary.career_tagline}</></span>

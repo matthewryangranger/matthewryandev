@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Alumni_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
-const lato = Lato({
+const fran = Alumni_Sans({
   subsets: ["latin"],
-  weight: "100"
+  weight: "500"
 });
 
 export const metadata: Metadata = {
@@ -19,7 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-stone-950 text-slate-100">
-      <body className={`${lato.className}>`}>
+      <body className={fran.className}>
+        <Header />
         {children}
       </body>
     </html>
