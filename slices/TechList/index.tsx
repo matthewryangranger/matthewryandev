@@ -55,7 +55,7 @@ const TechList: FC<TechListProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       ref={component}
     >
-      <Bounded className="-mb-20">
+      <Bounded className="-mb-16 mt-5">
         <Heading size="md" as="h2" className="-mt-28 text-stone-400">
           {slice.primary.heading}
         </Heading>
