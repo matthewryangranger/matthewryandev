@@ -62,11 +62,11 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         <Shapes />
         <div className="col-start-1 md:row-start-1">
           <h1 className="mb-8 text-9xl font-extrabold leading-none tracking-wide" aria-label={slice.primary.first_name + " " + slice.primary.middle_name}>
-            <span className="block text-slate-600 whitespace-nowrap">{renderLetters(slice.primary.first_name, "first")}</span>
-            <span className="-mt-[.2em] block text-slate-600 whitespace-nowrap">{renderLetters(slice.primary.middle_name, "middle")}</span>
-            <span className="-mt-[.2em] block text-slate-800 whitespace-nowrap">{renderLetters(slice.primary.last_name, "last")}</span>
+            <span className="block text-stone-400 whitespace-nowrap">{renderLetters(slice.primary.first_name, "first")}</span>
+            <span className="-mt-[.2em] block text-stone-400 whitespace-nowrap">{renderLetters(slice.primary.middle_name, "middle")}</span>
+            <span className="-mt-[.2em] block text-stone-500 whitespace-nowrap">{renderLetters(slice.primary.last_name, "last")}</span>
           </h1>
-          <span className="job-title block bg-gradient-to-tr from-slate-800 via-slate-700 to-slate-800 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl"><>{slice.primary.career_tagline}</></span>
+          <span className="job-title block bg-gradient-to-tr from-stone-800 via-stone-700 to-stone-800 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl"><>{slice.primary.career_tagline}</></span>
         </div>
       </div>
     </Bounded>

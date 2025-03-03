@@ -25,7 +25,7 @@ const Biography: FC<BiographyProps> = ({ slice }) => {
         <Heading as="h1" size="md" className="about-me text-stone-400 col-start-1">
           {slice.primary.heading}
         </Heading>
-        <div className="prose prose-xl prose-slate prose-invert col-start-1 text-2xl text-zinc-500">
+        <div className="prose prose-xl prose-slate prose-invert col-start-1 text-2xl text-stone-500">
           <PrismicRichText field={slice.primary.biography_paragraph} />
         </div>
 

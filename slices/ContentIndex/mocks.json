@@ -1,0 +1,57 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "due",
+				"type": "Text"
+			},
+			"conent_type": {
+				"__TYPE__": "FieldContent",
+				"value": "Project",
+				"type": "Select"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Commodo duis exercitation consectetur aliqua laborum consequat duis est voluptate eiusmod."
+						}
+					}
+				]
+			},
+			"view_more_text": {
+				"__TYPE__": "FieldContent",
+				"value": "common",
+				"type": "Text"
+			},
+			"fallback_item_image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+					"width": 3958,
+					"height": 3958
+				},
+				"url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+				"width": 3958,
+				"height": 3958,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "vast",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]
