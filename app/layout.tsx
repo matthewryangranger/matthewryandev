@@ -15,10 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-stone-950 text-slate-100">
-      <body className={``}>
+      <body className="relative min-h-screen">
         <Header />
         {children}
         <Footer />
+        <div className="absolute pointer-events-none inset-0 -z-40 h-full bg-[url('/noisetexture.jpg')] opacity-10 mix-blend-soft-light"></div>
       </body>
     </html>
   );

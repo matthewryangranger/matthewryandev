@@ -65,7 +65,7 @@ const TechList: FC<TechListProps> = ({ slice }) => {
 
       {slice.primary.tech_list_group.map(({ tech_color, tech_name }, index) => (
         <div key={index}
-          className="tech-row mb-8 opacity-90 flex items-center justify-center gap-4 sepia text-stone-700"
+          className="tech-row mb-8 opacity-90 flex items-center justify-center gap-4 text-stone-700"
           aria-label={tech_name || undefined}>
           {Array.from({ length: 16 }, (_, index) => (
             <React.Fragment key={index}>
