@@ -1,11 +1,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isFilled, asImageSrc } from "@prismicio/client";
-import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
-import { components } from "@/slices";
-import Bounded from "@/components/Bounded";
+import ContentBody from "@/components/ContentBody";
 
 type Params = { uid: string };
 
@@ -15,11 +13,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const page = await client.getByUID("blog_post", uid).catch(() => notFound());
 
   return (
-
-    <Bounded as="section">
-      <SliceZone slices={page.data.slices} components={components} />
-    </Bounded>
-
+    <ContentBody page={page} />
   );
 }
 

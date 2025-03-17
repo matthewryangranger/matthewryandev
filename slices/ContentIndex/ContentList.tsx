@@ -25,7 +25,7 @@ export default function contentList({ items, contentType, fallbackItemImage, vie
 
     const [currentItem, setCurrentItem] = useState<null | number>(null);
 
-    const urlPrefix = contentType === "Blog" ? "/blog" : "/project";
+    const urlPrefix = contentType === "Blog" ? "/blog" : "/projects";
 
     useEffect(() => {
         let ctx = gsap.context(() => {
