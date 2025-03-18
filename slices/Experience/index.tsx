@@ -29,9 +29,15 @@ const Experience = ({ slice }: ExperienceProps): JSX.Element => {
 
           <div className="mt-1 flex w-fit items-center gap-1 text-2xl font-semibold tracking-tight text-stone-400">
             <span>{item.date}</span>{" "}
-            <span>|</span>
-            <span className="hidden sm:inline">{item.institution}</span>
+            <span className="hidden md:inline">|</span>
+            <span className="hidden md:inline">{item.institution}</span>
           </div>
+
+          <div className="mt-1 flex w-fit items-center gap-1 text-2xl font-semibold tracking-tight text-stone-400">
+            <span className="inline md:hidden">{item.institution}</span>
+          </div>
+
+
           <div className="prose prose-lg prose-invert text-stone-500 mt-4">
             <PrismicRichText field={item.description} />
           </div>
