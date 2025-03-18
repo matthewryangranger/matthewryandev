@@ -18,19 +18,19 @@ const Experience = ({ slice }: ExperienceProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <Heading as="h2" size="md" className="text-stone-400">
+      <Heading as="h2" size="md" className="text-stone-400 -mt-3">
         {slice.primary.heading}
       </Heading>
       {slice.primary.zone.map((item, index) => (
         <div key={index} className="ml-6 mt-8 max-w-prose md:ml-12 md:mt-16">
-          <Heading as="h3" size="sm" className="text-stone-400">
+          <Heading as="h3" size="sm">
             {item.title}
           </Heading>
 
           <div className="mt-1 flex w-fit items-center gap-1 text-2xl font-semibold tracking-tight text-stone-400">
             <span>{item.date}</span>{" "}
-            <span>|</span>{" "}
-            <span>{item.institution}</span>
+            <span>|</span>
+            <span className="hidden sm:inline">{item.institution}</span>
           </div>
           <div className="prose prose-lg prose-invert text-stone-500 mt-4">
             <PrismicRichText field={item.description} />

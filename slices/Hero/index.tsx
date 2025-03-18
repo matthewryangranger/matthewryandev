@@ -58,10 +58,10 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       ref={component}
     >
-      <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center">
+      <div className="grid min-h-[70vh] grid-cols-1 items-center xl:grid-cols-2">
         <Shapes />
-        <div className="col-start-1 md:row-start-1">
-          <h1 className="mb-8 text-9xl font-extrabold leading-none tracking-wide" aria-label={slice.primary.first_name + " " + slice.primary.middle_name}>
+        <div className="col-start-1 xl:row-start-1 " data-speed=".2">
+          <h1 className="mb-8 text-[clamp(3rem,20vmin,10rem)] font-extrabold leading-none tracking-wide" aria-label={slice.primary.first_name + " " + slice.primary.middle_name}>
             <span className="block text-stone-400 whitespace-nowrap">{renderLetters(slice.primary.first_name, "first")}</span>
             <span className="-mt-[.2em] block text-stone-400 whitespace-nowrap">{renderLetters(slice.primary.middle_name, "middle")}</span>
             <span className="-mt-[.2em] block text-stone-500 whitespace-nowrap">{renderLetters(slice.primary.last_name, "last")}</span>
@@ -70,6 +70,9 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         </div>
       </div>
     </Bounded>
+
+
+
   );
 };
 
