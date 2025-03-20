@@ -22,7 +22,7 @@ const Biography: FC<BiographyProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
     >
       <div className="grid gap-x-8 gap-y-6 md:grid-cols-[2fr, 1fr]">
-        <Heading as="h1" size="md" className="about-m col-start-1 text-stone-400">
+        <Heading as="h1" size="md" className="col-start-1 mb-4 text-stone-400">
           {slice.primary.heading}
         </Heading>
         <div className="prose prose-xl prose-slate prose-invert col-start-1 text-2xl text-stone-500">

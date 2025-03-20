@@ -23,7 +23,7 @@ const Experience = ({ slice }: ExperienceProps): JSX.Element => {
       </Heading>
       {slice.primary.zone.map((item, index) => (
         <div key={index} className="ml-6 mt-8 max-w-prose md:ml-12 md:mt-16">
-          <Heading as="h3" size="sm">
+          <Heading as="h3" size="sm" className="text-stone-400">
             {item.title}
           </Heading>
 
