@@ -30,14 +30,15 @@ export default function ContentBody({ page }: {
 
         <Bounded as="section">
             <div className="rounded-sm px-4">
-                <Heading as="h1" size="md" className="text-stone-400">{page.data.title}</Heading>
-                <div className="flex gap-4 mx-1 mt-3 text-stone-400 text-xl font-bold">
+                <Heading as="h1" size="md" className="text-stone-200">{page.data.title}</Heading>
+                <div className="flex gap-4 mx-1 mt-3 text-stone-400  text-xl font-bold">
                     {page.tags.map((tag) => (
                         <span key={tag}>{tag}</span>
                     ))}
                 </div>
-                <p className="mt-8 border-b border-stone-600 text-xl font-medium text-stone-400">{formattedDate}</p>
-                <div className="prose prose-lg prose-invert mt-12 w-full max-w-none md:mt-20">
+                <p className="mt-2 border-stone-600 text-xl font-medium text-stone-200">{"𐪟 " + formattedDate + " 𐪟"}</p>
+                <hr className="mt-4"></hr>
+                <div className="prose prose-lg prose-invert mt-12 w-full max-w-none md:mt-8">
                     <SliceZone slices={page.data.slices} components={components} />
                 </div>
             </div>
