@@ -11,8 +11,6 @@ export default function ContentBody({ page }: {
 
     function formatDate(date: DateField) {
         if (isFilled.date(date)) {
-
-
             const dateOptions: Intl.DateTimeFormatOptions = {
                 weekday: "long",
                 year: "numeric",
@@ -27,7 +25,6 @@ export default function ContentBody({ page }: {
     const formattedDate = formatDate(page.data.date);
 
     return (
-
         <Bounded as="section">
             <div className="rounded-sm px-4">
                 <Heading as="h1" size="md" className="text-stone-200">{page.data.title}</Heading>
