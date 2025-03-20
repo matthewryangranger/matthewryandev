@@ -12,7 +12,7 @@ export type TextBlockProps = SliceComponentProps<Content.TextBlockSlice>;
  */
 const TextBlock: FC<TextBlockProps> = ({ slice }) => {
   return (
-    <div className="max-w-prose prose-stone prose-headings:text-stone-300 prose-p:text-stone-300">
+    <div className="max-w-prose prose-stone text-2xl prose-headings:text-stone-300 prose-p:text-stone-300">
       <PrismicRichText field={slice.primary.text} ></PrismicRichText>
     </div>
   );
